@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">USP Library System</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="select_role">Staff or Student!</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="role_array">
+        <item>Staff</item>
+        <item>Student</item>
+    </string-array>
+    <string name="title_activity_staff_main">StaffMain</string>
+    <string name="title_activity_checkout">Checkout</string>
+</resources>
