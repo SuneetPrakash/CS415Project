@@ -6,18 +6,18 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
-public class StaffMain extends AppCompatActivity {
+public class StudentMain extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.staffmain);
+        setContentView(R.layout.student_main);
 
 
 
-        findViewById(R.id.btnLogout).setOnClickListener(
+
+        findViewById(R.id.btnLogout2).setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -27,56 +27,12 @@ public class StaffMain extends AppCompatActivity {
                         startActivity(i);
                     }
                 });
-
-
-        findViewById(R.id.btnCheckOut).setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-
-                        Intent i = new Intent(getApplicationContext(), Checkout.class);
-                        startActivity(i);
-
-                    }
-                });
-
-
-
-        findViewById(R.id.btnCheckInBook).setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-
-                        Intent i = new Intent(getApplicationContext(), Checkin.class);
-                        startActivity(i);
-
-                    }
-                });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_staff_main, menu);
+        getMenuInflater().inflate(R.menu.menu_student_main, menu);
         return true;
     }
 

@@ -16,17 +16,21 @@
             android:layout_height="wrap_content"
             android:text="Logout"
             android:id="@+id/btnLogout"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_marginTop="36dp"
+            android:layout_below="@+id/btnCheckOut"
+            android:layout_alignRight="@+id/btnCheckOut"
+            android:layout_alignEnd="@+id/btnCheckOut"
+            android:layout_alignLeft="@+id/btnCheckOut"
+            android:layout_alignStart="@+id/btnCheckOut" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Check Out Book"
             android:id="@+id/btnCheckOut"
-            android:layout_below="@+id/textView3"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="64dp" />
+            android:layout_marginTop="37dp"
+            android:layout_below="@+id/btnCheckInBook"
+            android:layout_centerHorizontal="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,6 +41,18 @@
             android:layout_marginTop="47dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check IN BOOK"
+            android:id="@+id/btnCheckInBook"
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="63dp"
+            android:layout_alignRight="@+id/btnCheckOut"
+            android:layout_alignEnd="@+id/btnCheckOut"
+            android:layout_alignLeft="@+id/btnCheckOut"
+            android:layout_alignStart="@+id/btnCheckOut" />
 
 
     </RelativeLayout>

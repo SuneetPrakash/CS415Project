@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     public EditText editusername ;
     public EditText editpassword ;
-    private Spinner role;
+    public Spinner role;
 
     JSONParser jParser1 = new com.example.suneet86.cs415project.JSONParser();
 
@@ -106,6 +106,8 @@ public class MainActivity extends AppCompatActivity {
         Password = editpassword.getText().toString();
         Role= role.getSelectedItem().toString();
 
+        ((Global) this.getApplication()).setUserLogged(Username);
+
         Thread thread = new Thread(new Runnable(){
             @Override
             public void run() {
@@ -154,9 +156,14 @@ public class MainActivity extends AppCompatActivity {
                                 public void run()
                                 {
 
+
                                     Toast.makeText(getBaseContext(),
-                                            "Login UnSuccessful",
+                                            "Login Successful" ,
                                             Toast.LENGTH_SHORT).show();
+
+                                    Intent i = new Intent(getApplicationContext(), StudentMain.class);
+                                    startActivity(i);
+
 
                                 }
                             });
@@ -187,7 +194,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void run()
                             {
-                                //  resultText7.setText("Login UnSuccessful" + e);
+
                             }
                         });
                     }

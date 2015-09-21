@@ -10,4 +10,6 @@
     </string-array>
     <string name="title_activity_staff_main">StaffMain</string>
     <string name="title_activity_checkout">Checkout</string>
+    <string name="title_activity_student_main">StudentMain</string>
+    <string name="title_activity_checkin">Checkin</string>
 </resources>

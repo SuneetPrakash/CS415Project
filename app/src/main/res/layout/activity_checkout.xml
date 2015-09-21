@@ -104,5 +104,14 @@
             android:layout_toRightOf="@+id/textView7"
             android:layout_alignRight="@+id/editBookISBN"
             android:layout_alignEnd="@+id/editBookISBN" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:id="@+id/btnBack"
+            android:layout_alignBottom="@+id/btnCheckOutBook"
+            android:layout_toLeftOf="@+id/btnCheckOutBook"
+            android:layout_toStartOf="@+id/btnCheckOutBook" />
     </RelativeLayout>
 </RelativeLayout>

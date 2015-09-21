@@ -35,18 +35,40 @@ public class Checkout extends AppCompatActivity {
     // private static String url_all_products = "http://10.0.2.2:80/CS415/loginAndroid.php";
     private static String url_all_products = "http://192.168.0.167/CS415/checkout.php";
     private static final String TAG_SUCCESS = "success";
+    private static final String TAG_MESSAGE = "message";
     private static final String TAG_Username = "Username";
     private static final String TAG_BookISBN = "BookISBN";
     private static final String TAG_CopyNum = "CopyNum";
+    private static final String TAG_User_LOGGED= "UserLogged";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
 
+      final String userLogged = ((Global) this.getApplication()).getuserLogged();
+
+
+
+
+
+        findViewById(R.id.btnBack).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+
+                        Intent i = new Intent(getApplicationContext(), StaffMain.class);
+                        startActivity(i);
+
+                    }
+                });
+
 
         findViewById(R.id.btnCheckOutBook).setOnClickListener(
                 new View.OnClickListener() {
+
+
                     @Override
                     public void onClick(View view) {
 
@@ -55,6 +77,7 @@ public class Checkout extends AppCompatActivity {
                         final String Username;
                          final String BookISBN;
                          final  String  CopyNum;
+                      //  final String userLogged;
 
 
                         editUsername = (EditText) findViewById(R.id.editUsername);
@@ -64,6 +87,7 @@ public class Checkout extends AppCompatActivity {
                         Username = editUsername.getText().toString();
                         BookISBN = editBookISBN.getText().toString();
                         CopyNum = editCopyNum.getText().toString();
+
 
 
                         Thread thread = new Thread(new Runnable(){
@@ -76,6 +100,7 @@ public class Checkout extends AppCompatActivity {
                                     params2.add(new BasicNameValuePair(TAG_Username, Username));
                                     params2.add(new BasicNameValuePair(TAG_BookISBN, BookISBN));
                                     params2.add(new BasicNameValuePair(TAG_CopyNum, CopyNum));
+                                    params2.add(new BasicNameValuePair(TAG_User_LOGGED, userLogged));
 
 
                                     // params2.add(new BasicNameValuePair(TAG_bmi, bmiInterpretation));
@@ -85,6 +110,7 @@ public class Checkout extends AppCompatActivity {
 
                                     try {
                                         int success = json.getInt(TAG_SUCCESS);
+                                        final String message1 = json.getString(TAG_MESSAGE);
 
                                         if (success == 1) {
                                             runOnUiThread(new Runnable()
@@ -97,8 +123,8 @@ public class Checkout extends AppCompatActivity {
                                                             "Book Checked Out Successfully",
                                                             Toast.LENGTH_SHORT).show();
 
-                                                   // Intent i = new Intent(getApplicationContext(), StaffMain.class);
-                                                   // startActivity(i);
+                                                    Intent i = new Intent(getApplicationContext(), StaffMain.class);
+                                                    startActivity(i);
 
                                                 }
                                             });
@@ -106,23 +132,6 @@ public class Checkout extends AppCompatActivity {
 
                                         }
 
-
-                                        if (success == 2) {
-                                            runOnUiThread(new Runnable()
-                                            {
-                                                @Override
-                                                public void run()
-                                                {
-
-                                                    Toast.makeText(getBaseContext(),
-                                                            "Successful",
-                                                            Toast.LENGTH_SHORT).show();
-
-                                                }
-                                            });
-
-
-                                        }
 
                                         if (success==0) {
                                             runOnUiThread(new Runnable()
@@ -132,8 +141,11 @@ public class Checkout extends AppCompatActivity {
                                                 {
 
                                                     Toast.makeText(getBaseContext(),
-                                                            "Login UnSuccessful",
+                                                            "Error While Checking Out Book!",
                                                             Toast.LENGTH_SHORT).show();
+
+                                                    Intent i = new Intent(getApplicationContext(), StaffMain.class);
+                                                    startActivity(i);
 
                                                 }
                                             });

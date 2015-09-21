@@ -6,57 +6,40 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
-public class StaffMain extends AppCompatActivity {
+public class Checkin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.staffmain);
+        setContentView(R.layout.activity_checkin);
 
 
 
-        findViewById(R.id.btnLogout).setOnClickListener(
+        findViewById(R.id.btnBackCheckIn).setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
 
 
-                        Intent i = new Intent(getApplicationContext(), MainActivity.class);
-                        startActivity(i);
-                    }
-                });
-
-
-        findViewById(R.id.btnCheckOut).setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-
-                        Intent i = new Intent(getApplicationContext(), Checkout.class);
+                        Intent i = new Intent(getApplicationContext(), StaffMain.class);
                         startActivity(i);
 
                     }
                 });
 
 
-
-        findViewById(R.id.btnCheckInBook).setOnClickListener(
+        findViewById(R.id.btnCheckIn).setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
 
 
-                        Intent i = new Intent(getApplicationContext(), Checkin.class);
+                        Intent i = new Intent(getApplicationContext(), StaffMain.class);
                         startActivity(i);
 
                     }
                 });
-
-
-
 
 
 
@@ -76,7 +59,7 @@ public class StaffMain extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_staff_main, menu);
+        getMenuInflater().inflate(R.menu.menu_checkin, menu);
         return true;
     }
 
