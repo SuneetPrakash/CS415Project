@@ -16,12 +16,12 @@
             android:layout_height="wrap_content"
             android:text="Logout"
             android:id="@+id/btnLogout"
-            android:layout_marginTop="36dp"
-            android:layout_below="@+id/btnCheckOut"
-            android:layout_alignRight="@+id/btnCheckOut"
-            android:layout_alignEnd="@+id/btnCheckOut"
+            android:layout_alignParentBottom="true"
             android:layout_alignLeft="@+id/btnCheckOut"
-            android:layout_alignStart="@+id/btnCheckOut" />
+            android:layout_alignStart="@+id/btnCheckOut"
+            android:layout_marginBottom="84dp"
+            android:layout_alignRight="@+id/btnCheckOut"
+            android:layout_alignEnd="@+id/btnCheckOut" />
 
         <Button
             android:layout_width="wrap_content"
@@ -53,6 +53,18 @@
             android:layout_alignEnd="@+id/btnCheckOut"
             android:layout_alignLeft="@+id/btnCheckOut"
             android:layout_alignStart="@+id/btnCheckOut" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Profile"
+            android:id="@+id/btnStaffProfile"
+            android:layout_below="@+id/btnCheckOut"
+            android:layout_alignRight="@+id/btnCheckOut"
+            android:layout_alignEnd="@+id/btnCheckOut"
+            android:layout_marginTop="33dp"
+            android:layout_alignLeft="@+id/btnLogout"
+            android:layout_alignStart="@+id/btnLogout" />
 
 
     </RelativeLayout>

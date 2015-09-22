@@ -29,6 +29,19 @@ public class StaffMain extends AppCompatActivity {
                 });
 
 
+
+        findViewById(R.id.btnStaffProfile).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+
+                        Intent i = new Intent(getApplicationContext(), StaffProfile.class);
+                        startActivity(i);
+                    }
+                });
+
+
         findViewById(R.id.btnCheckOut).setOnClickListener(
                 new View.OnClickListener() {
                     @Override

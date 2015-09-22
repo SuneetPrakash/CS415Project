@@ -35,6 +35,10 @@
             android:name=".Checkin"
             android:label="@string/title_activity_checkin" >
         </activity>
+        <activity
+            android:name=".StaffProfile"
+            android:label="@string/title_activity_staff_profile" >
+        </activity>
     </application>
 
 </manifest>

@@ -20,20 +20,20 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Book ISBN:"
         android:id="@+id/textView11"
-        android:layout_marginTop="44dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="52dp"
         android:layout_below="@+id/textView10"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="33dp"
-        android:layout_marginStart="33dp" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_alignTop="@+id/textView11"
-        android:layout_alignRight="@+id/editText2"
-        android:layout_alignEnd="@+id/editText2"
+        android:id="@+id/editTextBookISBN_Checkin"
+        android:layout_alignBottom="@+id/textView11"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_toRightOf="@+id/textView12"
         android:layout_toEndOf="@+id/textView12" />
 
@@ -44,14 +44,14 @@
         android:text="Copy Number :"
         android:id="@+id/textView12"
         android:layout_marginTop="43dp"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/textView11"
         android:layout_alignLeft="@+id/textView11"
         android:layout_alignStart="@+id/textView11" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
+        android:id="@+id/editTextCopyNum_Checkin"
         android:layout_alignTop="@+id/textView12"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -63,9 +63,9 @@
         android:layout_height="wrap_content"
         android:text="Check-in"
         android:id="@+id/btnCheckIn"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignTop="@+id/btnBackCheckIn"
+        android:layout_alignRight="@+id/editTextBookISBN_Checkin"
+        android:layout_alignEnd="@+id/editTextBookISBN_Checkin" />
 
     <Button
         android:layout_width="wrap_content"
@@ -73,7 +73,7 @@
         android:text="Back"
         android:id="@+id/btnBackCheckIn"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_alignStart="@+id/editText2" />
+        android:layout_alignLeft="@+id/editTextBookISBN_Checkin"
+        android:layout_alignStart="@+id/editTextBookISBN_Checkin" />
 
 </RelativeLayout>
