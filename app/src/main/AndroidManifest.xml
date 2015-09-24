@@ -39,6 +39,22 @@
             android:name=".StaffProfile"
             android:label="@string/title_activity_staff_profile" >
         </activity>
+        <activity
+            android:name=".StudentProfile"
+            android:label="@string/title_activity_student_profile" >
+        </activity>
+        <activity
+            android:name=".Search"
+            android:label="@string/title_activity_search" >
+        </activity>
+        <activity
+            android:name=".Bookdetails"
+            android:label="@string/title_activity_bookdetails" >
+        </activity>
+        <activity
+            android:name=".Reservationlist"
+            android:label="@string/title_activity_reservationlist" >
+        </activity>
     </application>
 
 </manifest>

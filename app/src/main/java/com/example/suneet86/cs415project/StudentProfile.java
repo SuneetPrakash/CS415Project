@@ -20,22 +20,21 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StaffProfile extends AppCompatActivity {
+public class StudentProfile extends AppCompatActivity {
 
 
-
-
-    public TextView txtName2 ;
-    public TextView txtAddress ;
-    public TextView txtPhone ;
-    public TextView txtName ;
-
+    public TextView txtStudentPName ;
+    public TextView txtStudentPAddress ;
+    public TextView txtStudentPProgram;
+    public TextView txtStudentPMajor1 ;
+    public TextView txtStudentPMajor2;
+    public TextView txtStudentPID;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_staff_profile);
+        setContentView(R.layout.activity_student_profile);
 
 
 
@@ -49,19 +48,20 @@ public class StaffProfile extends AppCompatActivity {
 
         EditText TF;
 
-        final  String url_all_products = "http://192.168.0.167/CS415/StaffProfile.php";
+        final  String url_all_products = "http://192.168.0.167/CS415/StudentProfile.php";
         final  String TAG_SUCCESS = "success";
         final String TAG_MESSAGE = "message";
         final String TAG_User_LOGGED= "username";
         final String TAG_ADDRESS= "address";
-        final String TAG_FNAME= "staff_fname";
-        final String TAG_LNAME= "staff_lname";
-        final String TAG_PHONE= "phone";
+        final String TAG_FNAME= "student_fname";
+        final String TAG_LNAME= "student_lname";
+        final String TAG_PROGRAM= "program";
+        final String TAG_MAJOR1= "major1";
+        final String TAG_MAJOR2= "major2";
 
 
-        final String TAG_STAFFDETAILS = "staffdetails";
-        JSONArray staffdetails = null;
-
+        final String TAG_STUDENTDETAILS = "studentdetails";
+        JSONArray studentdetails = null;
 
 
         Thread thread = new Thread(new Runnable(){
@@ -89,7 +89,7 @@ public class StaffProfile extends AppCompatActivity {
                                     JSONArray productObj = null;
 
                                     try {
-                                        productObj = json.getJSONArray(TAG_STAFFDETAILS);
+                                        productObj = json.getJSONArray(TAG_STUDENTDETAILS);
                                     } catch (JSONException e) {
                                         // TODO Auto-generated catch block
                                         e.printStackTrace();
@@ -102,27 +102,39 @@ public class StaffProfile extends AppCompatActivity {
                                         String display_lname = "";
                                         String display_address = "";
                                         String display_phone = "";
+                                        String display_major1 = "";
+                                        String display_major2 = "";
+                                        String display_program = "";
 
 
 
                                         display_fname = productObj.getJSONObject(0).getString(TAG_FNAME);
                                         display_lname = productObj.getJSONObject(0).getString(TAG_LNAME);
                                         display_address = productObj.getJSONObject(0).getString(TAG_ADDRESS);
-                                        display_phone = productObj.getJSONObject(0).getString(TAG_PHONE);
-
-                                        txtName2 = (TextView) findViewById(R.id.txtName2);
-                                        txtName2.setText(display_fname + " " + display_lname);
-
-                                        txtAddress = (TextView) findViewById(R.id.txtAddress);
-                                        txtAddress.setText(display_address);
-
-                                        txtPhone = (TextView) findViewById(R.id.txtPhone);
-                                        txtPhone.setText(display_phone);
-
-                                          Log.d("The Values ",  productObj.getJSONObject(0).getString(TAG_FNAME));
+                                        display_major1 = productObj.getJSONObject(0).getString(TAG_MAJOR1);
+                                        display_major2 = productObj.getJSONObject(0).getString(TAG_MAJOR2);
+                                        display_program = productObj.getJSONObject(0).getString(TAG_PROGRAM);
 
 
+                                        txtStudentPName = (TextView) findViewById(R.id.txtStudentPName);
+                                        txtStudentPName.setText(display_fname + " " + display_lname);
 
+                                        txtStudentPAddress = (TextView) findViewById(R.id.txtStudentPAddress);
+                                        txtStudentPAddress.setText(display_address);
+
+                                        txtStudentPProgram = (TextView) findViewById(R.id.txtStudentPProgram);
+                                        txtStudentPProgram.setText(display_program);
+
+                                        txtStudentPMajor1 = (TextView) findViewById(R.id.txtStudentPMajor1);
+                                        txtStudentPMajor1.setText(display_major1);
+
+                                        txtStudentPMajor2 = (TextView) findViewById(R.id.txtStudentPMajor2);
+                                        txtStudentPMajor2.setText(display_major2);
+
+                                        txtStudentPID = (TextView) findViewById(R.id.txtStudentPID);
+                                        txtStudentPID.setText(username);
+
+                                        Log.d("The Values ",  productObj.getJSONObject(0).getString(TAG_FNAME));
 
                                     } catch (JSONException e) {
                                         // TODO Auto-generated catch block
@@ -178,13 +190,13 @@ public class StaffProfile extends AppCompatActivity {
 
 
 
-
-        findViewById(R.id.btnProfileBack).setOnClickListener(
+        findViewById(R.id.btnStudentPBack).setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
 
-                        Intent i = new Intent(getApplicationContext(), StaffMain.class);
+
+                        Intent i = new Intent(getApplicationContext(), StudentMain.class);
                         startActivity(i);
                     }
                 });
@@ -196,7 +208,7 @@ public class StaffProfile extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_staff_profile, menu);
+        getMenuInflater().inflate(R.menu.menu_student_profile, menu);
         return true;
     }
 

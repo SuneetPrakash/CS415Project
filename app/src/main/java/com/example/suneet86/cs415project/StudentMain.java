@@ -27,6 +27,31 @@ public class StudentMain extends AppCompatActivity {
                         startActivity(i);
                     }
                 });
+
+
+
+        findViewById(R.id.btnStudentProfile).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+
+                        Intent i = new Intent(getApplicationContext(), StudentProfile.class);
+                        startActivity(i);
+                    }
+                });
+
+
+        findViewById(R.id.btnStudentSearch).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+
+                        Intent i = new Intent(getApplicationContext(), Search.class);
+                        startActivity(i);
+                    }
+                });
     }
 
     @Override

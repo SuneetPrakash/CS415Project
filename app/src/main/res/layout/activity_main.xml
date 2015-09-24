@@ -12,39 +12,42 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#74EDED" >
+        android:background="#296eed" >
 
 
-        <TextView android:text="USP Library System" android:layout_width="wrap_content"
+        <TextView android:text="  USP Library System" android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView"
-            android:textSize="@dimen/HeaderSize"
+            android:textSize="@dimen/abc_text_size_headline_material"
+            android:textColor="#fafeff"
             android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignLeft="@+id/editTextUsername"
+            android:layout_alignStart="@+id/editTextUsername"
+            android:layout_marginTop="63dp" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Login"
             android:id="@+id/btnLogin"
-            android:layout_marginTop="33dp"
-            android:layout_below="@+id/spinner"
-            android:layout_alignRight="@+id/textView"
-            android:layout_alignEnd="@+id/textView" />
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/spinner"
+            android:layout_alignEnd="@+id/spinner"
+            android:layout_marginBottom="40dp" />
 
         <TextView
-            android:text="Username :"
+            android:text="   Username :  "
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
             android:textSize="@dimen/TextSize"
-            android:layout_alignTop="@+id/editTextUsername"
+            android:textColor="#ffffff"
+            android:layout_alignBottom="@+id/editTextUsername"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
         <TextView
-            android:text="Password :"
+            android:text="   Password :"
             android:layout_width="wrap_content"
             android:id="@+id/textViewPassword"
             android:layout_height="32dp"
@@ -53,19 +56,19 @@
             android:layout_above="@+id/textView4"
             android:layout_alignLeft="@+id/textView2"
             android:layout_alignStart="@+id/textView2"
-            android:layout_marginBottom="40dp" />
+            android:layout_marginBottom="40dp"
+            android:textColor="#ffffff" />
 
         <EditText
             android:layout_width="200dp"
             android:inputType="textPassword"
-            android:layout_height="32dp"
+            android:layout_height="35dp"
             android:ems="10"
             android:id="@+id/editTextPassword"
-            android:background="@android:color/holo_green_light"
-            android:layout_alignBaseline="@+id/textViewPassword"
+            android:background="#ffffff"
             android:layout_alignBottom="@+id/textViewPassword"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2" />
 
         <EditText
 
@@ -73,38 +76,52 @@
             android:layout_width="300dp"
             android:layout_height="32dp"
             android:ems="10"
-            android:background="@android:color/holo_green_light"
-            android:layout_above="@+id/textViewPassword"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginBottom="36dp"
+            android:background="#ffffff"
+            android:layout_above="@+id/editTextPassword"
             android:layout_alignLeft="@+id/editTextPassword"
-            android:layout_alignStart="@+id/editTextPassword" />
+            android:layout_alignStart="@+id/editTextPassword"
+            android:layout_marginBottom="53dp"
+            android:layout_alignRight="@+id/editTextPassword"
+            android:layout_alignEnd="@+id/editTextPassword" />
 
         <Spinner
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:id="@+id/spinner"
             android:entries="@array/role_array"
             android:prompt="@string/select_role"
-            android:background="@android:color/holo_green_light"
-            android:layout_alignTop="@+id/textView4"
+            android:background="#ffffff"
             android:spinnerMode="dropdown"
-            android:layout_alignRight="@+id/btnCheckOutBook"
-            android:layout_alignEnd="@+id/btnCheckOutBook"
+            android:layout_above="@+id/btnLogin"
             android:layout_alignLeft="@+id/editTextPassword"
-            android:layout_alignStart="@+id/editTextPassword" />
+            android:layout_alignStart="@+id/editTextPassword"
+            android:layout_marginBottom="39dp"
+            android:layout_alignRight="@+id/editTextPassword"
+            android:layout_alignEnd="@+id/editTextPassword" />
         android:spinnerMode="dropdown" />
 
         <TextView
-            android:text="Role :"
+            android:text="   Role :"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView4"
             android:textSize="@dimen/TextSize"
-            android:layout_centerVertical="true"
-            android:layout_alignLeft="@+id/textViewPassword"
-            android:layout_alignStart="@+id/textViewPassword" />
+            android:textColor="#ffffff"
+            android:layout_alignTop="@+id/spinner"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@mipmap/logo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+            android:layout_above="@+id/editTextUsername"
+            android:layout_alignRight="@+id/textViewPassword"
+            android:layout_alignEnd="@+id/textViewPassword" />
     </RelativeLayout>
 
 </LinearLayout>

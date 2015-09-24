@@ -7,7 +7,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#74EDED" >
+        android:background="#2f6eed"
+        >
 
 
 
@@ -16,12 +17,12 @@
             android:layout_height="wrap_content"
             android:text="Logout"
             android:id="@+id/btnLogout"
-            android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/btnCheckOut"
-            android:layout_alignStart="@+id/btnCheckOut"
-            android:layout_marginBottom="84dp"
+            android:layout_below="@+id/btnStaffProfile"
+            android:layout_marginTop="40dp"
             android:layout_alignRight="@+id/btnCheckOut"
-            android:layout_alignEnd="@+id/btnCheckOut" />
+            android:layout_alignEnd="@+id/btnCheckOut"
+            android:layout_alignLeft="@+id/btnCheckOut"
+            android:layout_alignStart="@+id/btnCheckOut" />
 
         <Button
             android:layout_width="wrap_content"
@@ -38,9 +39,13 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Staff Menu Screen"
             android:id="@+id/textView3"
-            android:layout_marginTop="47dp"
+            android:layout_marginTop="49dp"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="26dp"
+            android:layout_marginStart="26dp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_toRightOf="@+id/imageView2"
+            android:layout_toEndOf="@+id/imageView2" />
 
         <Button
             android:layout_width="wrap_content"
@@ -52,7 +57,8 @@
             android:layout_alignRight="@+id/btnCheckOut"
             android:layout_alignEnd="@+id/btnCheckOut"
             android:layout_alignLeft="@+id/btnCheckOut"
-            android:layout_alignStart="@+id/btnCheckOut" />
+            android:layout_alignStart="@+id/btnCheckOut"
+            android:shadowColor="#ffffff" />
 
         <Button
             android:layout_width="wrap_content"
@@ -65,6 +71,16 @@
             android:layout_marginTop="33dp"
             android:layout_alignLeft="@+id/btnLogout"
             android:layout_alignStart="@+id/btnLogout" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:src="@mipmap/user"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/btnCheckInBook"
+            android:layout_toStartOf="@+id/btnCheckInBook"
+            android:layout_marginLeft="30dp" />
 
 
     </RelativeLayout>

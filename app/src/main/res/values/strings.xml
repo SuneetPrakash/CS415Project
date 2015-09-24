@@ -8,9 +8,19 @@
         <item>Staff</item>
         <item>Student</item>
     </string-array>
+    <string-array name="search_arrays">
+        <item>Title</item>
+        <item>Author</item>
+        <item>Publisher</item>
+        <item>Subject</item>
+    </string-array>
     <string name="title_activity_staff_main">StaffMain</string>
     <string name="title_activity_checkout">Checkout</string>
     <string name="title_activity_student_main">StudentMain</string>
     <string name="title_activity_checkin">Checkin</string>
     <string name="title_activity_staff_profile">StaffProfile</string>
+    <string name="title_activity_student_profile">StudentProfile</string>
+    <string name="title_activity_search">Search</string>
+    <string name="title_activity_bookdetails">Book Search Results</string>
+    <string name="title_activity_reservationlist">My Reservations</string>
 </resources>

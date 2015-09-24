@@ -112,6 +112,8 @@ public class Checkout extends AppCompatActivity {
                                         int success = json.getInt(TAG_SUCCESS);
                                         final String message1 = json.getString(TAG_MESSAGE);
 
+
+                                        Log.d("Create Response", json.toString());
                                         if (success == 1) {
                                             runOnUiThread(new Runnable()
                                             {
@@ -120,7 +122,29 @@ public class Checkout extends AppCompatActivity {
                                                 {
 
                                                     Toast.makeText(getBaseContext(),
-                                                            "Book Checked Out Successfully",
+                                                            "Book Checked Out Successfully" + message1,
+                                                            Toast.LENGTH_SHORT).show();
+
+                                                    Intent i = new Intent(getApplicationContext(), StaffMain.class);
+                                                    startActivity(i);
+
+                                                }
+                                            });
+
+
+                                        }
+
+
+
+                                        if (success == 2) {
+                                            runOnUiThread(new Runnable()
+                                            {
+                                                @Override
+                                                public void run()
+                                                {
+
+                                                    Toast.makeText(getBaseContext(),
+                                                            "Student has a fine. Cannot Check out book!",
                                                             Toast.LENGTH_SHORT).show();
 
                                                     Intent i = new Intent(getApplicationContext(), StaffMain.class);
@@ -141,7 +165,7 @@ public class Checkout extends AppCompatActivity {
                                                 {
 
                                                     Toast.makeText(getBaseContext(),
-                                                            "Error While Checking Out Book!",
+                                                            "Error While Checking Out Book!" + message1,
                                                             Toast.LENGTH_SHORT).show();
 
                                                     Intent i = new Intent(getApplicationContext(), StaffMain.class);

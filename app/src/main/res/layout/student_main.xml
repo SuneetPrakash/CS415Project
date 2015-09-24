@@ -6,7 +6,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#74EDED" >
+        android:background="#2f6eed" >
 
 
 
@@ -27,15 +27,32 @@
             android:layout_height="wrap_content"
             android:text="Logout"
             android:id="@+id/btnLogout2"
+            android:layout_below="@+id/btnStudentSearch"
+            android:layout_alignLeft="@+id/btnStudentSearch"
+            android:layout_alignStart="@+id/btnStudentSearch"
+            android:layout_marginTop="49dp"
+            android:layout_alignRight="@+id/btnStudentProfile"
+            android:layout_alignEnd="@+id/btnStudentProfile" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Profile"
+            android:id="@+id/btnStudentProfile"
+            android:layout_below="@+id/textView3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="74dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:id="@+id/btnStudentSearch"
             android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
-
-
-
-
-
-
-
+            android:layout_alignRight="@+id/btnStudentProfile"
+            android:layout_alignEnd="@+id/btnStudentProfile"
+            android:layout_alignLeft="@+id/btnStudentProfile"
+            android:layout_alignStart="@+id/btnStudentProfile" />
 
 
     </RelativeLayout>
